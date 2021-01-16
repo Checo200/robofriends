@@ -29,6 +29,23 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn deploy`
+
+To publish it at https://myusername.github.io/my-app, run:
+`npm install --save gh-pages`
+
+Alternatively you may use yarn:
+`yarn add gh-pages`
+
+Add the following scripts in your package.json:
+  "scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+
+*The predeploy script will run automatically before deploy is run.*
+
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
